@@ -2,6 +2,7 @@
   "name": "Twitch Continue Watching",
   "version": "1.0.0",
   "description": "This unofficial extension brings the Continue Watching mobile feature to the desktop.",
+  "manifest_version": 3,
   "homepage_url": "https://github.com/stefansundin/twitch-continue-watching",
   "author": "Stefan Sundin",
   "icons": {
@@ -9,7 +10,7 @@
     "48": "img/icon48.png",
     "128": "img/icon128.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "19": "img/icon19.png",
       "38": "img/icon38.png"
@@ -18,9 +19,10 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "https://*.twitch.tv/",
     "cookies",
     "activeTab"
   ],
-  "manifest_version": 2
+  "host_permissions": [
+    "https://*.twitch.tv/"
+  ]
 }
